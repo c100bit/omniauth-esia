@@ -53,6 +53,7 @@ module OmniAuth
       end
 
       def build_access_token
+        puts callback_url.inspect
         code = request.params['code']
         client.auth_code.get_token(code,
           {
